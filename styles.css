@@ -186,7 +186,7 @@ button,
 
 }
 .stars {
-    font-size: 16px;
+    font-size: 20px;
     color: black;
     margin-top: 5px;
 }
@@ -204,6 +204,12 @@ button,
     align-items: center;
     justify-content: center;
     padding: 15px;
-   
-   
 }
+
+.skill-item img {
+    width: 60px;  
+    height: 60px; 
+    object-fit: contain;
+    margin-bottom: 10px; 
+}
+
