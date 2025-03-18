@@ -245,9 +245,17 @@ button,
 }
 
 .studies h2 {
-    margin-bottom: 18px;
+    margin-bottom: 19px;
 }
 
 .experience h2{
-    margin-bottom: 18px;  
+    margin-bottom: 19px;  
+}
+
+.skills h2{
+    margin-bottom: 26px;  
+}
+
+.services h2{
+    margin-bottom: 20px;  
 }
