@@ -243,9 +243,9 @@ button,
 .skill-grid {
     display: grid;                      
     grid-template-columns: repeat(4, 1fr); 
-    gap: 10px;                            /* Menor espacio entre ítems */
-    width: 80%;                           /* Ajusta según tu diseño */
-    margin: 0 auto;                       /* Centra todo el contenedor en la página */
+    gap: 10px;                            
+    width: 80%;                           
+    margin: 0 auto;                       
     justify-items: center;        
 }
 .skill-grid .skill-item:nth-child(9) {
@@ -267,3 +267,4 @@ button,
 .services h2{
     margin-bottom: 20px;  
 }
+
