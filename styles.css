@@ -1,25 +1,24 @@
+/* ========== Estilos Base ========== */
 body {
-    font-family:'Open Sans', sans-serif;
+    font-family: 'Open Sans', sans-serif;
     margin: 0;
     padding: 0;
     background-color: #f5f5f5;
     color: #333;
     text-align: center;
-    
 }
 
 .hero {
     background: url('img/laptop.jpg') no-repeat center center/cover;
     height: 500px;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     color: white;
     font-size: 20px;
-    font-family: open Sans, sans serif;
     position: relative;
-    flex-direction: column;
-
+    z-index: 1;
 }
 
 .hero::after {
@@ -30,98 +29,8 @@ body {
     width: 100%;
     height: 100%;
     background: rgba(124, 151, 173, 0.5);
-    pointer-events: none; 
-}
-
-.nav {
-    position: absolute;
-    top: 10px;
-    right: 20px;
-    
-}
-
-.nav ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    
-    
-}
-
-.nav ul li {
-    margin-left: 15px;
-}
-
-.nav ul li a {
-    text-decoration: none;
-    color: white;
-    font-weight: bold;
-    padding: 10px 15px;
-    border-radius: 5px;
-    background: rgba(0, 0, 0, 0.5);
-    transition: background 0.3s;
-    
-}
-
-.nav ul li a:hover {
-    background: rgba(255, 255, 255, 0.3);
-}
-
-.hero-content {
-    background: rgba(0, 0, 0, 0.5);
-    padding: 20px;
-    border-radius: 10px;
-    border: 2px solid white; 
-    text-align: center;
-    font-size: 20px;
-    font-family: open Sans, sans serif;
-}
-
-.about, .studies, .experience, .services {
-    background: white;
-    border: none;
-    box-shadow: none;
-    padding: 20px;
-    font-size: 22px;
-    
-}
-
-.profile-pic {
-    width: 200px;
-    height: 200px;
-    border-radius: 50%;
-    display: block;
-    margin: 0 auto 10px;
-    top:77%;
-    transform: translate(-50%, -50%);
-    position: absolute;
-    left: 50%;
-   
-}
-
-.study-item h3 {
-    margin-bottom: 10px;
-}
-
-.service-grid {
-    display: grid;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 30px;
-    grid-template-columns: repeat(4, 1fr);
-    column-gap: 1px;
-}
-.skill-grid img {
-    width: 50px;
-    height: 50px;
-}
-
-
-footer {
-    background-color: #91919E;
-    font-size: 22px;
-    padding: 20px;
+    pointer-events: none;
+    z-index: 1;
 }
 
 .hero h1 {
@@ -130,80 +39,154 @@ footer {
     text-align: center;
 }
 
+.hero p {
+    font-size: 1.2rem;
+}
+
+.hero-content {
+    background: rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    border-radius: 10px;
+    border: 2px solid white;
+    text-align: center;
+    font-size: 20px;
+}
+
+.profile-container {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    margin-bottom: 0;
+}
+
+.profile-pic {
+    margin-top: -170px;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    position: relative;
+    z-index: 3;
+}
+
+/* ========== Navbar ========== */
+.nav {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+}
+
+.nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.nav ul li {
+    margin-left: 15px;
+}
+
+.nav ul li a {
+    text-decoration: none;
+    color: black;
+    /* Cambio a color negro */
+    font-weight: bold;
+    padding: 10px 15px;
+    border-radius: 5px;
+}
+
+.nav ul li a:hover {
+    background: rgba(255, 255, 255, 0.3);
+}
+
+/* ========== Secciones Comunes ========== */
+.about,
+.studies,
+.experience,
+.services,
+.skills {
+    padding: 20px;
+    font-size: 22px;
+    border: none;
+    box-shadow: none;
+}
+
 .about {
     text-align: center;
     padding-top: 65px;
 }
 
 .about h2 {
-    margin-top: 90px;
-    margin-bottom: 18px;
+    margin: 90px 0 18px;
 }
 
-.studies{
+.studies {
     text-align: center;
-   background-color:#F2F2F2;
+    background-color: #F2F2F2;
+}
+
+.studies h2,
+.experience h2 {
+    margin-bottom: 19px;
+}
+
+.experience {
+    text-align: center;
+    background-color: #DDD6D6;
 }
 
 .services {
     background-color: #D6C4C4;
 }
 
-.services h2{
+.services h2 {
     text-align: center;
-} 
+    margin-bottom: 20px;
+}
+
+/* ========== Grillas y Elementos de Contenido ========== */
+.study-item h3 {
+    margin-bottom: 10px;
+}
 
 .study-item ul {
     display: inline-block;
     text-align: left;
 }
 
-.experience {
-    text-align: center;
-    background-color:#DDD6D6;
+.service-grid {
+    display: grid;
+    gap: 30px;
+    grid-template-columns: repeat(4, 1fr);
+    justify-content: center;
 }
 
-.skills h2{
-    text-align: center;
-    margin-bottom: 26px;  
+.skill-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    max-width: 1200px;
+    margin: 0 auto;
+    justify-items: center;
 }
 
-.skills{
-    background-color: #d9d9d9;
-    border: none;
-    box-shadow: none;
-    padding: 20px;
-    font-size: 22px; 
-}
-
-button, 
-.nav ul li a,
-.navbar-toggler {
-    all: unset; 
-    display: inline-block; 
-    padding: 10px 15px; 
-    cursor: pointer; 
+.skill-grid img {
+    width: 50px;
+    height: 50px;
 }
 
 .skill-item {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 0px;
-    padding:0px;
-
-}
-.stars {
-    font-size: 20px;
-    color: black;
-    margin-top: -10px;
+    padding: 0;
 }
 
-.service-item img {
-    width: 60px; 
-    height: 60px; 
-    object-fit: contain; 
-    margin-bottom: 10px; 
+.skill-item img {
+    width: 60px;
+    height: 60px;
+    object-fit: contain;
+    margin-bottom: 10px;
 }
 
 .service-item {
@@ -214,59 +197,308 @@ button,
     padding: 15px;
 }
 
-.skill-item img {
-    width: 60px;  
-    height: 60px; 
+.service-item img {
+    width: 60px;
+    height: 60px;
     object-fit: contain;
-    margin-bottom: 10px; 
-    padding: 0;
+    margin-bottom: 10px;
 }
 
+.stars {
+    font-size: 20px;
+    color: black;
+    margin-top: -10px;
+}
+
+/* ========== Footer ========== */
 .footer-container {
     display: flex;
-    align-items: center; 
+    align-items: center;
     justify-content: space-between;
-    gap: 20px; 
-    padding-left: 30px;
-    padding-right: 30px;
+    gap: 20px;
+    padding: 0 30px;
 }
 
-
+.footer-container .Logo {
+    width: 200px;
+    height: auto;
+}
 
 .footer-info p {
     margin: 10px;
     display: flex;
     align-items: center;
-    gap: 13px; 
-
-}
-.skill-grid {
-    display: grid;                      
-    grid-template-columns: repeat(4, 1fr); 
-    gap: 10px;                            
-    width: 80%;                           
-    margin: 0 auto;                       
-    justify-items: center;        
-}
-.skill-grid .skill-item:nth-child(9) {
-    grid-column: 2;
-}
-.skill-grid .skill-item:nth-child(10) {
-    grid-column: 3;
+    gap: 13px;
 }
 
-.studies h2 {
-    margin-bottom: 19px;
+footer {
+    background-color: #91919E;
+    font-size: 22px;
+    padding: 20px;
 }
 
-.experience h2{
-    margin-bottom: 19px;  
+/* ========== Reset para Botones y Enlaces ========== */
+button {
+    all: unset;
+    display: inline-block;
+    padding: 10px 15px;
+    cursor: pointer;
 }
 
-
-.services h2{
-    margin-bottom: 20px;  
+.navbar-toggler {
+    display: none;
 }
-.Logo {
-    zoom: 1.2; 
+
+/* ========== Media Queries ========== */
+
+@media (min-width: 572px) {
+    .navbar-collapse {
+        display: flex !important;
+    }
+}
+
+/* Tablet (pantallas <= 992px) */
+@media (max-width: 992px) {
+    .hero {
+        height: 400px;
+    }
+
+    .hero h1 {
+        font-size: 2.2rem;
+    }
+
+    .skill-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .service-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Teléfonos grandes/medianos (pantallas <= 768px) */
+@media (max-width: 768px) {
+    .hero {
+        height: 350px;
+    }
+
+    .hero h1 {
+        font-size: 2rem;
+    }
+
+    .hero p {
+        font-size: 1rem;
+    }
+
+    .skill-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .service-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .profile-pic {
+        width: 180px;
+        height: 180px;
+        margin-top: -80px;
+    }
+}
+
+/* Cambios en el navbar: solo para pantallas menores a 572px */
+@media (max-width: 572px) {
+    .nav {
+        left: 20px;
+        right: auto;
+        top: 10px;
+    }
+
+    .navbar-toggler {
+        display: inline-block;
+        position: absolute;
+        top: 10px;
+        left: 20px;
+        background-color: rgba(0, 0, 0, 0.5);
+        border: none;
+        padding: 10px;
+        z-index: 100;
+    }
+
+    .navbar-collapse {
+        background-color: rgba(0, 0, 0, 0.8);
+        width: 100%;
+        position: absolute;
+        top: 50px;
+        /* Ajusta este valor según tu diseño */
+        left: 0;
+        text-align: left;
+        padding: 10px 0;
+        z-index: 99;
+    }
+
+    .navbar-collapse .nav-link {
+        color: #fff !important;
+        font-size: 1.2rem;
+        padding: 10px 20px;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+    }
+}
+
+/* Otras adaptaciones para pantallas pequeñas (<=576px) */
+@media (max-width: 576px) {
+    .footer-container {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .hero {
+        height: auto;
+        padding: 20px 0;
+    }
+
+    .hero h1 {
+        font-size: 1.8rem;
+    }
+
+    .hero p {
+        font-size: 0.9rem;
+    }
+
+    .skill-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .service-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .profile-pic {
+        width: 150px;
+        height: 150px;
+        margin-top: -50px;
+    }
+}
+
+/* Ajustes para pantallas muy pequeñas (<=290px) */
+@media (max-width: 290px) {
+    .skill-grid {
+        grid-template-columns: 1fr;
+        gap: 8px;
+        padding: 0 5px;
+    }
+
+    .footer-container {
+        flex-direction: column;
+        padding: 0 5px;
+        gap: 5px;
+    }
+
+    .footer-info p {
+        font-size: 0.8rem;
+        text-align: center;
+        white-space: normal;
+    }
+
+    .hero {
+        padding: 10px;
+    }
+
+    .hero h1 {
+        font-size: 1.2rem;
+        padding: 0 5px;
+        word-break: break-word;
+    }
+
+    .hero p {
+        font-size: 0.75rem;
+        padding: 0 5px;
+    }
+
+    .profile-pic {
+        width: 100px;
+        height: 100px;
+    }
+}
+
+/* Ajustes para pantallas extra pequeñas (<=211px) */
+@media (max-width: 211px) {
+
+    body,
+    .hero,
+    .about,
+    .studies,
+    .experience,
+    .skills,
+    .services,
+    footer {
+        padding: 0;
+        margin: 0;
+    }
+
+    .hero-content {
+        padding: 5px;
+        font-size: 0.7rem;
+    }
+
+    .hero h1 {
+        font-size: 1rem;
+        padding: 0 5px;
+        word-break: break-word;
+    }
+
+    .hero p {
+        font-size: 0.6rem;
+        padding: 0 5px;
+        word-break: break-word;
+    }
+
+    .profile-pic {
+        width: 80px;
+        height: 80px;
+        margin-top: -40px;
+    }
+
+    .skill-grid {
+        grid-template-columns: 1fr;
+        gap: 5px;
+        padding: 0 5px;
+    }
+
+    .skill-item img {
+        width: 30px;
+        height: 30px;
+    }
+
+    .stars {
+        font-size: 0.6rem;
+    }
+
+    .service-grid {
+        grid-template-columns: 1fr;
+        gap: 5px;
+        padding: 0 5px;
+    }
+
+    .service-item img {
+        width: 30px;
+        height: 30px;
+    }
+
+    .footer-container {
+        flex-direction: column;
+        padding: 5px;
+        gap: 5px;
+    }
+
+    .footer-info p {
+        font-size: 0.6rem;
+        margin: 0;
+        word-break: break-word;
+    }
+
+    img {
+        max-width: 100%;
+        height: auto;
+    }
 }
